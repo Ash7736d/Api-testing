@@ -8,10 +8,10 @@
 <body>
     <h2>Add Balance to User</h2>
     <form id="balanceForm">
-        <label for="userId">User Discord ID:</label><br>
+        <label for="userId">𝗨𝘀𝗲𝗿 𝗜𝗗:</label><br>
         <input type="text" id="userId" name="userId" required><br><br>
         
-        <label for="amount">Amount to Add:</label><br>
+        <label for="amount">𝗔𝗺𝗼𝘂𝗻𝘁:</label><br>
         <input type="number" id="amount" name="amount" required><br><br>
         
         <button type="submit">Add Balance</button>
@@ -27,7 +27,7 @@
             const amount = parseInt(document.getElementById("amount").value);
 
             try {
-                const response = await fetch("https://your-api-url:4000/updateUserBalance", {
+                const response = await fetch("http://192.168.100.12:4000/updateUserBalance", { // Update with your Termux IP address
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
